@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Payroll</title>
+    <link rel="stylesheet" href="css/payroll.css">
+</head>
+<body onload="initpayroll()">
+    <div class="top-bar">Simple Payroll</div>
+    <main>
+        <div class="container">
+            <div class="title-container">
+                <h1 class="sw-title">Employee Payroll</h1>
+            </div>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="employname">Employee Name:</label>
+                    <input type="text" id="employname" name="employname">
+                </div>
+                <div class="input-group">
+                    <label for="daysworked">Days Worked:</label>
+                    <input type="number" id="daysworked" name="daysworked">
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="dayrate">Daily Rate:</label>
+                    <input type="number" id="dayrate" name="dayrate">
+                </div>
+                <div class="input-group">
+                    <label for="dedamount">Deduction Amount:</label>
+                    <input type="number" id="dedamount" name="dedamount">
+                </div>
+            </div>
+            <div class="form-container">
+                <button onclick="addtoPayroll()">Add to Payroll</button>
+            </div>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="delemployee">Delete Employee (Line No.):</label>
+                    <input type="number" id="delemployee" name="delemployee">
+                </div>
+                <div class="input-group">
+                    <button onclick="deleteEmployee()">Delete Employee</button>
+                </div>
+            </div>
+            <div id="payroll"></div>
+        </div>
+    </main>
+    <div class="back-link">
+        <a href="./index.html">Back to Home Page</a>
+    </div>
+    <div class="footer">Created by Julian Paolo B. Trinidad © 2024</div>
+    <script src="js/payroll.js"></script>
+</body>
+</html>

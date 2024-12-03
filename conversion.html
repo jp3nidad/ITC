@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Tool</title>
+    <link rel="stylesheet" href="css/conversion.css">
+</head>
+<body>
+  <div class="top-bar">Conversion Tool</div>
+    <main>
+        <div class="container">
+            <div class="title-container">
+              <h1 class="sw-title">Select Conversion Type</h1>
+                <select id="conversionType">
+                    <option value="computeconvc">Celsius to Fahrenheit</option>
+                    <option value="computeconvf">Fahrenheit to Celsius</option>
+                    <option value="computemtf">Meters to Feet</option>
+                    <option value="computeftm">Feet to Meters</option>
+                </select>
+                <input type="number" id="inputValue" placeholder="Enter value">
+                <button onclick="convert()">Convert</button>
+                <input type="text" id="resultInput" readonly>
+            </div>
+        </div>
+    </main>
+    <div class="back-link">
+      <a href="./index.html">Back to Home Page</a>
+  </div>
+    <script src="js/conversion.js"></script>
+    <div class="footer">Created by Julian Paolo B. Trinidad © 2024</div>
+</body>
+</html>
