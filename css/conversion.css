@@ -17,7 +17,7 @@ body, html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 .top-bar {
@@ -31,14 +31,14 @@ body, html {
     top: 0;
     z-index: 999;
     font-family: 'Star Wars', sans-serif;
-    box-sizing: border-box; /* Prevent padding from breaking layout */
+    box-sizing: border-box; 
 }
 
 .sw-title {
     font-size: 3.5rem;
     color: #FFFF00;
     animation: flicker 1.5s infinite alternate;
-    word-wrap: break-word; /* Prevent overflow of long titles */
+    word-wrap: break-word; 
 }
 
 @keyframes flicker {
@@ -57,8 +57,8 @@ body, html {
     text-align: center;
     color: #fff;
     margin-top: 200px;
-    padding: 0 15px; /* Add padding to avoid touching screen edges */
-    box-sizing: border-box; /* Consistent sizing */
+    padding: 0 15px; 
+    box-sizing: border-box; 
 }
 
 select,
@@ -72,11 +72,11 @@ button {
     padding: 15px;
     font-size: 1.3rem;
     margin: 10px;
-    width: calc(100% - 40px); /* Ensure input elements scale responsively */
+    width: calc(100% - 40px);
     max-width: 500px;
     font-family: 'Star Wars', sans-serif;
     text-align: center;
-    box-sizing: border-box; /* Prevent padding from increasing width */
+    box-sizing: border-box; 
 }
 
 button {
@@ -97,13 +97,13 @@ button:hover {
     border-radius: 8px;
     padding: 15px;
     font-size: 1.3rem;
-    width: calc(100% - 40px); /* Ensure it adapts to the screen size */
+    width: calc(100% - 40px); 
     max-width: 500px;
     font-family: 'Star Wars', sans-serif;
     text-align: center;
     margin: 20px auto;
     display: none;
-    box-sizing: border-box; /* Consistent sizing */
+    box-sizing: border-box;
 }
 
 .back-link {
@@ -121,7 +121,7 @@ button:hover {
     padding: 15px;
     font-size: 1.3rem;
     display: block;
-    width: calc(100% - 40px); /* Scale width for responsiveness */
+    width: calc(100% - 40px); 
     max-width: 500px;
     margin: 10px auto;
     font-family: 'Star Wars', sans-serif;
