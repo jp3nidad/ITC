@@ -1,13 +1,14 @@
-@font-face{
+@font-face {
     font-family: 'Star Wars';
-    src: url(SF\ Distant\ Galaxy.ttf)
+    src: url(SF\ Distant\ Galaxy.ttf);
 }
+
 body {
     font-family: 'Star Wars', sans-serif;
     margin: 0;
     padding: 0;
     background: #000000;
-    color: #fff; 
+    color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,9 +16,11 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 .top-bar {
-    background: #111; 
+    background: #111;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -26,12 +29,14 @@ body {
     width: 100%;
     top: 0;
     z-index: 999;
-    font-family: 'Star Wars', sans-serif; 
+    font-family: 'Star Wars', sans-serif;
+    box-sizing: border-box; /* Ensures padding and borders are accounted */
 }
 
 .title-container {
     text-align: center;
     margin: 120px 20px;
+    padding: 0 10px; /* Add padding to avoid content touching edges */
 }
 
 .sw-title {
@@ -39,6 +44,7 @@ body {
     color: #FFFF00;
     animation: flicker 1.5s infinite alternate;
     margin-top: 10px;
+    word-wrap: break-word; /* Ensure text doesn't overflow */
 }
 
 @keyframes flicker {
@@ -52,34 +58,41 @@ body {
         opacity: 1;
     }
 }
+
 .assignments-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     margin: -120px 0;
+    padding: 0 10px; /* Prevent overflow on smaller screens */
+    box-sizing: border-box; /* Prevent extra width */
 }
+
 .menu-button {
     background: #333;
-    color: #fff; 
+    color: #fff;
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 15px 20px;
     border: 2px solid #FFFF00;
     border-radius: 10px;
-    width: 90%;
+    width: calc(100% - 20px); /* Dynamic width to fit screen */
     max-width: 500px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 15px;
+    box-sizing: border-box;
 }
+
 .menu-button:hover {
-    background: #FFFF00; 
+    background: #FFFF00;
     color: #000;
     border-color: #FFFF00;
     transform: translateY(-5px);
 }
+
 .footer {
     background: #111;
     color: #fff;
@@ -88,11 +101,13 @@ body {
     font-size: 0.9rem;
     box-shadow: 0 -4px 10px #FFFF00;
     margin-top: auto;
+    box-sizing: border-box; /* Maintain consistent width */
+    width: 100%;
 }
 
 @media (max-width: 768px) {
-    .game-title {
-        font-size: 1.8rem;
+    .sw-title {
+        font-size: 2.5rem; /* Reduce title size */
     }
 
     .menu-button {
@@ -101,6 +116,14 @@ body {
     }
 
     .top-bar {
-        font-size: 1rem;
+        font-size: 1.5rem; /* Scale down top bar text */
+    }
+
+    .title-container {
+        margin: 100px 10px;
+    }
+
+    .assignments-menu {
+        margin: 0;
     }
 }
